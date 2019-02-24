@@ -1,0 +1,32 @@
+
+<div class="main">
+<h2>People</h2>
+
+<mat-list>
+
+  <mat-divider></mat-divider>
+  <mat-list-item *ngFor="let p of people" matTooltip="Edit {{p.name}}" (click)=onSelect(p)
+    routerLink="/editperson/{{p.id}}">
+    <span class="nameEmail">{{p.name}}, {{p.email}}</span><span class="editHover"><mat-icon matListIcon>edit</mat-icon></span>
+    <mat-icon matListIcon>account_circle</mat-icon>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+
+  <!-- <div >
+  <ng-container *ngFor="let p of people" matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element" matTooltip="Edit {{p.name}}" (click)=onSelect(p)
+    routerLink="/editperson/{{p.id}}"> {{p.name}} </td>
+  </ng-container>
+
+  <ng-container *ngFor="let p of people" matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element" matTooltip="Edit {{p.name}}" (click)=onSelect(p)
+    routerLink="/editperson/{{p.id}}"> {{p.email}} </td>
+  </ng-container>
+</div> -->
+
+</mat-list>
+
+<button mat-stroked-button routerLink="/addperson" routerLinkActive="link-active">Add Person</button>
+</div>

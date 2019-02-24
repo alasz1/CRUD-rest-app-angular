@@ -1,0 +1,16 @@
+
+
+
+<div class="updateDetails" *ngIf="person">
+  <h3>Update / delete person details</h3>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="person.name" placeholder="Name" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="person.email" placeholder="Email" />
+  </mat-form-field>
+  <br>
+  <button mat-stroked-button (click)="update()">Update Person</button>
+  <button mat-stroked-button (click)="delete()">Delete Person</button>
+  <button mat-stroked-button (click)="goBack()">Cancel</button>
+</div>

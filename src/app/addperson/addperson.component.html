@@ -1,0 +1,16 @@
+
+<div class="newPerson">
+  <h3>Add Person</h3>
+
+  <mat-form-field>
+    Name: <input matInput #name>
+  </mat-form-field>
+
+  <mat-form-field>
+    Email: <input matInput #email>
+  </mat-form-field>
+  <br />
+
+  <button mat-stroked-button (click)="addPerson(name.value, email.value);name.value='';email.value=''">Add</button>
+  <button mat-stroked-button routerLink="/" routerLinkActive="link-active">Cancel</button>
+</div>
